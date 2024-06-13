@@ -6,7 +6,7 @@ const allowCors = require('../cors');
 
 const app = express();
 const PORT = process.env.PORT || 8000;
-
+connectDB();
 // Middleware
 app.use(express.json());
 app.use('/saveLeadData', allowCors(saveFormDataRouter));
