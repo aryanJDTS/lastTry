@@ -16,14 +16,8 @@ app.get('/', (req, res) => {
   res.send("Hello World");
 });
 
-// Connect to MongoDB
-connectDB().then(() => {
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
-}).catch(error => {
-  console.error('Database connection error:', error);
-  process.exit(1);
-});
+app.listen(8000,()=>{
+  console.log("connected to 8000");
+})
 
 module.exports = app;
