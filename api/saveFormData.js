@@ -6,17 +6,17 @@ router.post('/', async (req, res) => {
   const { name, email, phone, answerOne, answerTwo, answerThree, answerFour } = req.body;
 
   try {
-    const leadData = await Lead.create({
-      name,
-      email,
-      phone,
-      answers: {
-        answerOne,
-        answerTwo,
-        answerThree,
-        answerFour
-      }
-    });
+    // const leadData = await Lead.create({
+    //   name,
+    //   email,
+    //   phone,
+    //   answers: {
+    //     answerOne,
+    //     answerTwo,
+    //     answerThree,
+    //     answerFour
+    //   }
+    // });
     res.status(200).json({ message: "Data saved successfully" });
   } catch (error) {
     console.error(error);
